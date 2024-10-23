@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="natio Station - Tu emisora del amor con la mejor programacion para todo pueblico.">
+  <meta name="keywords" content="Natio Station, musica de plancha, musica crossover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Saxum Station - Rock Music</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+   
+  </header>
+
+  <section id="player">
+    <h2>Reproduciendo: <span id="nowPlaying">Cargando...</span></h2>
+    <audio id="audioPlayer" controls></audio>
+  </section>
+
+  <script>
+    let musicaIndex = 0;
+    let publicidadIndex = 0;
+    let songCount = 0; // Contador de canciones reproducidas
+    const cancionesPorPublicidad = 3; // NÃºmero de canciones antes de un anuncio
+    let musicaData = [];
+    let publicidadData = [];
+
+    const audioPlayer = document.getElementById('audioPlayer');
+    const nowPlaying = document.getElementById('nowPlaying');
+
+    // Cargar mÃºsica y publicidad
+    fetch('musica.json')
+      .then(response => response.json())
+      .then(data => {
+        musicaData = data.musica;
+        return fetch('publicidad.json');
+      })
+      .then(response => response.json())
+      .then(data => {
+        publicidadData = data.publicidad;
+        iniciarReproduccion(); // Iniciar la reproducciÃ³n
+      })
+      .catch(error => console.error('Error al cargar los archivos JSON:', error));
+
+    function iniciarReproduccion() {
+      if (songCount < cancionesPorPublicidad) {
+        reproducirMusica();
+      } else {
+        reproducirPublicidad();
+      }
+    }
+
+    function reproducirMusica() {
+      if (musicaIndex < musicaData.length) {
+        let cancion = musicaData[musicaIndex];
+        audioPlayer.src = cancion.archivo;
+        nowPlaying.textContent = `MÃºsica: ${cancion.titulo}`;
+        audioPlayer.play();
+        musicaIndex++;
+        songCount++; // Aumentar el contador de canciones
+      } else {
+        musicaIndex = 0; // Reiniciar lista de mÃºsica
+        reproducirMusica(); // Reiniciar si se acabaron las canciones
+      }
+    }
+
+    function reproducirPublicidad() {
+      if (publicidadIndex < publicidadData.length) {
+        let anuncio = publicidadData[publicidadIndex];
+        audioPlayer.src = anuncio.archivo;
+        nowPlaying.textContent = `Publicidad: ${anuncio.titulo}`;
+        audioPlayer.play();
+        publicidadIndex++;
+        songCount = 0; // Reiniciar el contador de canciones despuÃ©s de un anuncio
+      } else {
+        publicidadIndex = 0; // Reiniciar lista de publicidad
+        reproducirPublicidad(); // Reiniciar si se acabaron los anuncios
+      }
+    }
+
+    // Escuchar cuando la canciÃ³n o anuncio termina y alternar
+    audioPlayer.addEventListener('ended', iniciarReproduccion);
+  </script>
+</body>
+</html>
