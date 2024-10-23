@@ -5,10 +5,6 @@
     { "titulo": "Natio Station", "archivo": "publicidad/natio1.mp3" },
     { "titulo": "publicidad", "archivo": "publicidad/publicidad.mp3" },
     { "titulo": "advertise", "archivo": "publicidad/catch-it-117676.mp3" },
-    { "titulo": "exito y finanzas", "archivo": "publicidad/Éxito y Finanzas.mp3" },
-    { "titulo": "Amor en el Aire", "archivo": "publicidad/Amor en el Aire.mp3" },
-    { "titulo": "Natio Station", "archivo": "publicidad/natio.mp3" },
-    { "titulo": "Natio Station", "archivo": "publicidad/natio1.mp3" },
-    { "titulo": "publicidad", "archivo": "publicidad/publicidad.mp3" }
+    { "titulo": "exito y finanzas", "archivo": "publicidad/Éxito y Finanzas.mp3" }
   ]
 }
