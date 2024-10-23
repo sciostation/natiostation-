@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff6666;
+    color: white;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    margin: 20px;
+}
+
+audio {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+    border: 3px solid #ff6666;
+    border-radius: 10px;
+}
