@@ -6,7 +6,7 @@
   <meta name="description" content="natio Station - Tu emisora del amor con la mejor programacion para todo pueblico.">
   <meta name="keywords" content="Natio Station, musica de plancha, musica crossover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Saxum Station - Rock Music</title>
+  <title>La emisora del amor</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -56,7 +56,7 @@
       if (musicaIndex < musicaData.length) {
         let cancion = musicaData[musicaIndex];
         audioPlayer.src = cancion.archivo;
-        nowPlaying.textContent = `MÃºsica: ${cancion.titulo}`;
+        nowPlaying.textContent = `Musica: ${cancion.titulo}`;
         audioPlayer.play();
         musicaIndex++;
         songCount++; // Aumentar el contador de canciones
