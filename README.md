@@ -105,8 +105,8 @@ Este proyecto está licenciado bajo la [MIT License](LICENSE).
 ## Contacto
 
 Si tienes preguntas, sugerencias o simplemente quieres decirnos cuál es tu canción favorita, escríbenos a:
-- **Email:** 
-- **Redes Sociales:**
+
+ **Redes Sociales:**
 -  [@natiostationtv](https://www.youtube.com/@natiostationtv)
 -  [@natiostation](https://masto.es/@natiostation)
 
