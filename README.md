@@ -31,7 +31,6 @@
 ├──  musica.json        # Base de datos de las canciones
 ├──  publicidad.json        # Base de datos de la publicidad
 
-├── scripts/          # Scripts JS (si aplica)
 ├── musica/           # Pistas en MP3
 │       
 ├── publicidad/             # Archivos de publicidad MP3
@@ -41,15 +40,20 @@
 
 ---
 
-## tracks.json: Estructura de la Base de Datos
+## musica.json: Estructura de la Base de Datos
 
-El archivo `tracks.json` contiene información sobre las canciones disponibles en la emisora. A continuación, un ejemplo:
+El archivo `musica.json` contiene información sobre las canciones disponibles en la emisora. A continuación, un ejemplo:
 
-[
- 
-  }
-]
-```
+{
+  "musica": [
+    { "titulo": "Amor Agrio", "archivo": "musica/Amor Agrio.mp3" },
+    { "titulo": "could-ve-been", "archivo": "musica/could-ve-been.mp4" },
+    { "titulo": "Debbie Gibson Foolish Beat", "archivo": "musica/Debbie Gibson Foolish Beat.mp3" },
+    { "titulo": "Martika Toy Soldiers", "archivo": "musica/Martika Toy Soldiers.mp3" },
+    { "titulo": "Vuelo de la Golondrina", "archivo": "musica/Vuelo de la Golondrina.mp3" }
+   
+  ]
+}
 
 ---
 
@@ -63,7 +67,7 @@ El archivo `tracks.json` contiene información sobre las canciones disponibles e
 2. **Abre el archivo `index.html` en tu navegador:**
    - No necesitas un servidor local; solo un navegador compatible.
 
-3. **Edita el archivo `tracks.json` para agregar tus propias canciones.**
+3. **Edita el archivo `musica.json` para agregar tus propias canciones.**
 
 4. **Disfruta de la música!**
 
