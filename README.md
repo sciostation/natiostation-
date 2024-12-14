@@ -27,13 +27,15 @@
 
 ```
 ├── index.html         # Archivo principal de la aplicación
-├── styles/           # Archivos CSS
-│   └── main.css     # Estilos principales
+├──   style.css         # Archivos CSS
+├──  musica.json        # Base de datos de las canciones
+├──  publicidad.json        # Base de datos de la publicidad
+
 ├── scripts/          # Scripts JS (si aplica)
-├── assets/           # Archivos estáticos (imágenes, MP3, etc.)
-│   └── music/      # Pistas en MP3
-├── data/             # Archivos JSON
-│   └── tracks.json  # Base de datos de canciones
+├── musica/           # Pistas en MP3
+│       
+├── publicidad/             # Archivos de publicidad MP3
+│   
 └── README.md        # Documentación del proyecto
 ```
 
