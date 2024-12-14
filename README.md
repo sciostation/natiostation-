@@ -43,7 +43,7 @@
 ## musica.json: Estructura de la Base de Datos
 
 El archivo `musica.json` contiene información sobre las canciones disponibles en la emisora. A continuación, un ejemplo:
-
+```json
 {
   "musica": [
     { "titulo": "Amor Agrio", "archivo": "musica/Amor Agrio.mp3" },
@@ -54,6 +54,8 @@ El archivo `musica.json` contiene información sobre las canciones disponibles e
    
   ]
 }
+
+```
 
 ---
 
