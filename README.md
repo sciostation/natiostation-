@@ -45,19 +45,8 @@
 
 El archivo `tracks.json` contiene información sobre las canciones disponibles en la emisora. A continuación, un ejemplo:
 
-```json
 [
-  {
-    "id": 1,
-    "title": "Canción del Corazón",
-    "artist": "Artista Romántico",
-    "file": "assets/music/cancion_del_corazon.mp3"
-  },
-  {
-    "id": 2,
-    "title": "Melodía de Amor",
-    "artist": "Dúo Sentimiento",
-    "file": "assets/music/melodia_de_amor.mp3"
+ 
   }
 ]
 ```
